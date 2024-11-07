@@ -1,10 +1,15 @@
 {
   "name": "@circlon/angular-tree-component",
-  "version": "16.0.0",
-  "description": "A simple yet powerful tree component for Angular",
   "author": "Circlon Group <os-group@circlon.de>",
   "homepage": "https://github.com/CirclonGroup/angular-tree-component",
+  "description": "A simple yet powerful tree component for Angular",
   "license": "MIT",
+  "version": "16.0.0",
+  "repository": "https://github.com/CirclonGroup/angular-tree-component.git",
+  "bugs": {
+    "url": "https://github.com/CirclonGroup/angular-tree-component/issues"
+  },
+  "readme": "https://github.com/CirclonGroup/angular-tree-component/blob/master/README.md",
   "keywords": [
     "ng",
     "angular",
@@ -13,53 +18,22 @@
     "angular-tree",
     "angular tree component"
   ],
-  "scripts": {
-    "lint:lib": "ng lint angular-tree-component",
-    "build:lib": "npm run lint:lib && npm run clean:dist && ng build angular-tree-component",
-    "build": "npm run build:lib",
-    "clean:dist": "rimraf dist",
-    "copy:files": "cp ./README.md ./dist/angular-tree-component && cp ./LICENSE ./dist/angular-tree-component && cp ./projects/angular-tree-component/src/lib/angular-tree-component.css ./dist/angular-tree-component/css/",
-    "copy:files:win": "copy README.md .\\dist\\angular-tree-component && copy LICENSE .\\dist\\angular-tree-component && xcopy .\\projects\\angular-tree-component\\src\\lib\\angular-tree-component.css .\\dist\\angular-tree-component\\css\\",
-    "doc": "typedoc --module commonjs --out doc lib/defs/api.ts",
-    "clean:all": "npm run clean:dist && rimraf node_modules && npm cache clean",
-    "lint": "tslint lib/**/*.ts",
-    "prepublish:lib:win": "npm run build:lib && npm run copy:files:win",
-    "start:example-app": "ng serve",
-    "start:example-app:es5": "ng serve --configuration=es5",
-    "start:docs-app": "ng serve --project=docs-app",
-    "build:docs-app": "ng build docs-app",
-    "example:cli:build": "npm run build && cd example/cli && npm install && cp -rf ../../dist node_modules/angular-tree-component/ && cp src/index.build.html src/index.html && ./node_modules/.bin/ng build --aot && cp src/index.dev.html src/index.html && mkdir -p 500tech/angular-tree-component/master/example/cli/ && cp -rf dist 500tech/angular-tree-component/master/example/cli/",
-    "test:ci:local": "testcafe chrome:headless e2e/*.testcafe.js --app \"ng serve\" -r xunit:./xunit/res.xml -c 4 --assertion-timeout 10000 --app-init-delay 20000 --page-load-timeout 10000 --selector-timeout 20000",
-    "test:dev": "testcafe chrome:headless e2e/*.testcafe.js",
-    "test:debug": "testcafe chrome e2e/*.testcafe.js --inspect-brk",
-    "test:slow": "testcafe chrome e2e/*.testcafe.js --speed 0.1",
-    "e2e:tsc": "../node_modules/.bin/tsc --p e2e/tsconfig.json",
-    "publish:release": "npm publish ./dist/angular-tree-component",
-    "publish:next": "npm publish ./dist/angular-tree-component --tag next"
+  "peerDependencies": {
+    "@angular/common": ">=16.0.0",
+    "@angular/core": ">=16.0.0"
   },
-  "files": [
-    "dist/"
-  ],
-  "readme": "https://github.com/CirclonGroup/angular-tree-component/blob/master/README.md",
-  "contributors": [
-    "Adam Klein <adam@500tech.com>"
-  ],
   "dependencies": {
-    "@angular/animations": "^16.0.0",
-    "@angular/cdk": "^16.0.0",
-    "@angular/forms": "^16.0.0",
-    "@angular/material": "^16.0.0",
-    "mobx": "^5.0.0"
+    "mobx": "^5.0.0",
+    "tslib": "^2.5.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.0",
-    "@angular-devkit/core": "^16.2.0",
     "@angular/cli": "^16.2.0",
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
     "@angular/compiler-cli": "^16.2.0",
     "@angular/core": "^16.2.0",
-    "@angular/elements": "^16.2.0",
+    "@angular/forms": "^16.2.0",
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/platform-server": "^16.2.0",
@@ -68,13 +42,7 @@
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^18.14.0",
     "codelyzer": "^6.0.0",
-    "html-dnd": "1.2.0",
-    "http-server": "0.9.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.0.0",
     "ng-packagr": "^16.0.0",
-    "nightwatch": "0.9.12",
-    "prettier": "^3.0.0",
     "jasmine-core": "~4.3.0",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.4.2",
@@ -82,40 +50,9 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.0.0",
-    "rimraf": "^3.0.2",
     "rxjs": "^7.8.0",
-    "testcafe": "^3.0.0",
-    "tslib": "^2.5.0",
     "tslint": "~6.1.0",
-    "typedoc": "^0.24.8",
     "typescript": "~4.9.5",
-    "uuid": "^9.0.0",
     "zone.js": "^0.13.0"
-  },
-  "repository": "https://github.com/CirclonGroup/angular-tree-component.git",
-  "bugs": {
-    "url": "https://github.com/CirclonGroup/angular-tree-component/issues"
-  },
-  "engines": {
-    "node": ">=14.20.0"
-  },
-  "prettier": {
-    "printWidth": 80,
-    "tabWidth": 2,
-    "useTabs": false,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "none",
-    "bracketSpacing": true,
-    "jsxBracketSameLine": true,
-    "requirePragma": false
-  },
-  "lint-staged": {
-    "*.{js,ts,json}": [
-      "./node_modules/.bin/prettier --write"
-    ],
-    "*.ts": [
-      "tslint"
-    ]
   }
 }
