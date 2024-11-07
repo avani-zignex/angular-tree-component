@@ -1,6 +1,6 @@
 {
-  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/angular-tree-component",
+  "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../../dist/angular-tree-component",
   "assets": ["src/lib/angular-tree-component.css"],
   "allowedNonPeerDependencies": ["mobx", "core-js", "lodash-es"],
   "lib": {
