@@ -20,11 +20,9 @@
     ],
     "paths": {
       "angular-tree-component": [
-        "dist/angular-tree-component",
         "dist/angular-tree-component"
       ],
       "angular-tree-component/*": [
-        "dist/angular-tree-component/*",
         "dist/angular-tree-component/*"
       ]
     }
