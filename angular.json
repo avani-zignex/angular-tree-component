@@ -22,7 +22,7 @@
             "main": "projects/example-app/src/main.ts",
             "polyfills": "projects/example-app/src/polyfills.ts",
             "tsConfig": "projects/example-app/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/example-app/src/favicon.ico",
               "projects/example-app/src/assets"
@@ -42,9 +42,9 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
+              "aot": true,
               "buildOptimizer": true,
               "budgets": [
                 {
@@ -166,7 +166,7 @@
             "main": "projects/docs-app/src/main.ts",
             "polyfills": "projects/docs-app/src/polyfills.ts",
             "tsConfig": "projects/docs-app/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/docs-app/src/favicon.ico",
               "projects/docs-app/src/assets"
@@ -188,6 +188,7 @@
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
+              "aot": true,
               "buildOptimizer": true,
               "budgets": [
                 {

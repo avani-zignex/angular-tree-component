@@ -21,82 +21,31 @@ import { DragOverStylingComponent } from './dragover-styling/dragover-styling.co
 import { DragOverStylingFullTreeComponent } from './dragover-styling/dragover-styling-full-tree.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: FullTreeComponent
-  },
-  {
-    path: 'basic',
-    component: BasicTreeComponent
-  },
-  {
-    path: 'fields',
-    component: FieldsComponent
-  },
-  {
-    path: 'templates',
-    component: TemplatesComponent
-  },
-  {
-    path: 'filter',
-    component: FilterComponent
-  },
-  {
-    path: 'empty',
-    component: EmptyComponent
-  },
-  {
-    path: 'rtl',
-    component: RtlTreeComponent
-  },
-  {
-    path: 'async',
-    component: AsyncTreeComponent
-  },
-  {
-    path: 'save-restore',
-    component: SaveRestoreComponent
-  },
-  {
-    path: 'checkboxes',
-    component: CheckboxesComponent
-  },
-  {
-    path: 'drag',
-    component: DragComponent
-  },
-  {
-    path: 'dragover-styling',
-    component: DragOverStylingComponent
-  },
+  { path: '', component: FullTreeComponent },
+  { path: 'basic', component: BasicTreeComponent },
+  { path: 'fields', component: FieldsComponent },
+  { path: 'templates', component: TemplatesComponent },
+  { path: 'filter', component: FilterComponent },
+  { path: 'empty', component: EmptyComponent },
+  { path: 'rtl', component: RtlTreeComponent },
+  { path: 'async', component: AsyncTreeComponent },
+  { path: 'save-restore', component: SaveRestoreComponent },
+  { path: 'checkboxes', component: CheckboxesComponent },
+  { path: 'drag', component: DragComponent },
+  { path: 'dragover-styling', component: DragOverStylingComponent },
   {
     path: 'dragover-styling-full-tree',
     component: DragOverStylingFullTreeComponent
   },
-  {
-    path: 'virtual',
-    component: VirtualscrollComponent
-  },
-  {
-    path: 'api',
-    component: ApiComponent
-  },
-  {
-    path: 'actions',
-    component: ActionsComponent
-  },
-  {
-    path: 'scroll-container',
-    component: ScrollContainerComponent
-  },
-  {
-    path: 'context-menu',
-    component: ContextmenuComponent
-  }
+  { path: 'virtual', component: VirtualscrollComponent },
+  { path: 'api', component: ApiComponent },
+  { path: 'actions', component: ActionsComponent },
+  { path: 'scroll-container', component: ScrollContainerComponent },
+  { path: 'context-menu', component: ContextmenuComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true, relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, { useHash: true })], // Removed relativeLinkResolution
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
