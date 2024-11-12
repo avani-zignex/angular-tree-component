@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ITreeOptions, ITreeState } from 'angular-tree-component';
+import { ITreeOptions, ITreeState } from 'projects/angular-tree-component/src/public-api';
 import { v4 } from 'uuid';
 
 @Component({

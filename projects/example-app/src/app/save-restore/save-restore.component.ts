@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ITreeState } from 'angular-tree-component';
+import { ITreeState } from 'projects/angular-tree-component/src/public-api';
 
 const getChildren = () => new Promise((resolve) => {
   setTimeout(() => resolve([

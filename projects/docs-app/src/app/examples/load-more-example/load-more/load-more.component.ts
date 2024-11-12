@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { delay, map, take } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
-import { ITreeOptions, TREE_ACTIONS, TreeComponent, TreeNode } from 'angular-tree-component';
+import { ITreeOptions, TREE_ACTIONS, TreeComponent, TreeNode } from 'projects/angular-tree-component/src/public-api';
 
 enum NodeType {
   LoadMore

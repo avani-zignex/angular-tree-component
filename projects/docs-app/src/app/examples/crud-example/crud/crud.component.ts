@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { ITreeOptions, TreeComponent, TreeNode } from 'angular-tree-component';
+import { ITreeOptions, TreeComponent, TreeNode } from 'projects/angular-tree-component/src/public-api';
 
 @Component({
   selector: 'app-crud',

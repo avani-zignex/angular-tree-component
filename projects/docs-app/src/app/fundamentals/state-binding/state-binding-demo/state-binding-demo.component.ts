@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ITreeState } from 'angular-tree-component';
+import { ITreeState } from 'projects/angular-tree-component/src/public-api';
 
 @Component({
   selector: 'app-state-binding-demo',
